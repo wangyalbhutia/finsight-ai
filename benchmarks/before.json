@@ -1,0 +1,59 @@
+{
+  "1000": {
+    "summary": {
+      "ms": 21,
+      "queries": 3
+    },
+    "dashboard": {
+      "ms": 278,
+      "queries": 10,
+      "tracemalloc_peak_mb": 2.3
+    },
+    "insights": {
+      "ms": 62,
+      "queries": 12
+    },
+    "forecast": {
+      "ms": 2763,
+      "queries": 3
+    }
+  },
+  "10000": {
+    "summary": {
+      "ms": 322,
+      "queries": 3
+    },
+    "dashboard": {
+      "ms": 3658,
+      "queries": 10,
+      "tracemalloc_peak_mb": 22.4
+    },
+    "insights": {
+      "ms": 772,
+      "queries": 12
+    },
+    "forecast": {
+      "ms": 281,
+      "queries": 3
+    }
+  },
+  "49000": {
+    "summary": {
+      "ms": 1567,
+      "queries": 3
+    },
+    "dashboard": {
+      "ms": 19142,
+      "queries": 10,
+      "tracemalloc_peak_mb": 108.4
+    },
+    "insights": {
+      "ms": 4257,
+      "queries": 12
+    },
+    "forecast": {
+      "ms": 1544,
+      "queries": 3
+    }
+  }
+}

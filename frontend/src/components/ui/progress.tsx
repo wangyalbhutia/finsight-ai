@@ -1,0 +1,2 @@
+import { cn } from "@/lib/utils";
+export function Progress({value=0,className}:{value?:number;className?:string}) { const v=Math.min(100,Math.max(0,value)); return <div className={cn("h-2.5 w-full overflow-hidden rounded-full bg-zinc-200 dark:bg-zinc-800",className)} role="progressbar" aria-valuenow={Math.round(v)}><div className={cn("h-full rounded-full transition-all", v>=100?"bg-red-600":v>=90?"bg-orange-500":v>=75?"bg-amber-500":"bg-teal-600")} style={{width:`${v}%`}}/></div>; }

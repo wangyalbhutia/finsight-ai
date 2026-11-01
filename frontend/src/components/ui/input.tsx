@@ -1,0 +1,4 @@
+import * as React from "react"; import { cn } from "@/lib/utils";
+export const Input = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(({className,...p},ref)=>(<input ref={ref} className={cn("flex h-10 w-full rounded-xl border border-zinc-300 bg-transparent px-3 py-2 text-sm outline-none focus:ring-2 ring-teal-600 disabled:opacity-50 dark:border-zinc-700",className)} {...p}/>)); Input.displayName="Input";
+export const Label = ({className,...p}: React.LabelHTMLAttributes<HTMLLabelElement>) => <label className={cn("text-sm font-medium",className)} {...p}/>;
+export const Select = React.forwardRef<HTMLSelectElement, React.SelectHTMLAttributes<HTMLSelectElement>>(({className,...p},ref)=>(<select ref={ref} className={cn("flex h-10 w-full rounded-xl border border-zinc-300 bg-white px-3 text-sm dark:border-zinc-700 dark:bg-zinc-900",className)} {...p}/>)); Select.displayName="Select";

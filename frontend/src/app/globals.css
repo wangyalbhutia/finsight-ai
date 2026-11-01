@@ -1,0 +1,4 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root{--background:0 0% 99%;--foreground:240 10% 10%;--card:0 0% 100%;--card-foreground:240 10% 10%;--muted:240 5% 96%;--muted-foreground:240 4% 46%;--border:240 6% 90%}
+.dark{--background:240 10% 7%;--foreground:0 0% 98%;--card:240 10% 10%;--card-foreground:0 0% 98%;--muted:240 5% 16%;--muted-foreground:240 5% 65%;--border:240 6% 20%}
+*{border-color:hsl(var(--border))} body{background:hsl(var(--background));color:hsl(var(--foreground));-webkit-font-smoothing:antialiased}

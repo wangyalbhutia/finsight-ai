@@ -1,0 +1,23 @@
+# FinSight AI — backend deployment on Render (frontend deploys separately on Vercel)
+# 1. Create a PostgreSQL instance on Render/Neon and set DATABASE_URL
+# 2. Set SECRET_KEY to a long random value (32+ chars)
+# 3. Set CORS_ORIGINS to your Vercel URL, e.g. https://finsight-ai.vercel.app
+services:
+  - type: web
+    name: finsight-ai-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: CORS_ORIGINS
+        sync: false
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "30"
+      - key: REFRESH_TOKEN_EXPIRE_DAYS
+        value: "7"
